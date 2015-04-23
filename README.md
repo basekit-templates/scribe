@@ -1,0 +1,2 @@
+# scribe
+Blog Template
