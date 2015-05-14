@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"scribe.png",
     "templateType":"blog",
-    "pageTypes": ["home1", "blogpost"],
+    "pageTypes": ["home"],
     "tags": {
     "en": ["business", "corporate", "company", "corporation", "professional"],
     "es": ["negocios", "corporativo", "empresa", "corporativo", "profesional"],
