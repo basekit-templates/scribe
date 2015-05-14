@@ -56,7 +56,6 @@
 // Standard Widgets
 
 .zone-content .widget {
-
     @media @bp-global-large {
         margin: 0 70px 20px;
     }
@@ -66,6 +65,8 @@
     @media @bp-global-small {
         margin: 0 20px 20px;
     }
+
+    // First Widget in the Zone
 
     &:first-child {
         @media @bp-global-large {
@@ -77,6 +78,12 @@
         @media @bp-global-small {
             margin-top: 20px;
         }
+    }
+
+    // Widgets in Responsive Columns
+
+    .responsivecolumns .widget {
+        margin: 0 0 20px 0;
     }
 }
 
@@ -121,6 +128,7 @@
     }
 }
 
+// Removes spacing between Menu Navigation and Menu Widget
 
 .widget[data-name="menusections"] + .widget[data-name="menu"] {
     @media @bp-global-large {
