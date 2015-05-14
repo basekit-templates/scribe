@@ -128,6 +128,10 @@ textarea {
     position: relative;
     z-index: 100;
 
+    &.icon {
+        padding-left: bkscale(@font-swatch7-font-size, 3);
+    }
+
     &:hover {
         background-color: fade(@font-swatch7-color, 7%);
     }
@@ -144,11 +148,15 @@ textarea {
     &:before {
         display: inline-block;
         vertical-align: middle;
-        margin: 0 26px 0 -26px;
+        margin: 0;
         background-color: @font-swatch7-color;
         color: @color-swatch1;
         width: bkscale(@font-swatch7-font-size, 3);
         text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
     }
 }
 
