@@ -140,6 +140,20 @@
 	color: @color-swatch1;
 	margin-top: 0;
 
+	font-family: @font-swatch1-font-family;
+    font-size: @font-swatch4-font-size;
+    line-height: @font-swatch4-line-height;
+    padding-bottom: 0.6em;
+    @media @bp-global-medium {
+        font-size: bkscale(@font-swatch5-font-size, 0.9);
+        line-height: bkscale(@font-swatch5-line-height, 0.9);
+    }
+
+    @media @bp-global-medium {
+        font-size: bkscale(@font-swatch5-font-size, 0.7);
+        line-height: bkscale(@font-swatch5-line-height, 0.7);
+    }
+
 	&:after {
 		background-color: @color-swatch1;
 	}
