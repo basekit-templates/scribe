@@ -130,6 +130,9 @@ textarea {
 
     &.icon {
         padding-left: bkscale(@font-swatch7-font-size, 4);
+        @media @mobile {
+            padding-left: bkscale(@font-swatch7-font-size, 3.2);
+        }
     }
 
     &:hover {
@@ -157,6 +160,9 @@ textarea {
         top: 0;
         left: 0;
         bottom: 0;
+        @media @mobile {
+             width: bkscale(@font-swatch7-font-size, 2.2);
+        }
     }
 }
 
