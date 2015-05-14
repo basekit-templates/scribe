@@ -12,9 +12,6 @@
 
 
 
-@product-list-large: ~"only screen and (min-width : 890px)";
-@product-list-medium: ~"only screen and (min-width : 600px) and (max-width : 1000px)";
-@product-list-small: ~"only screen and (min-width : 400px) and (max-width : 600px)";
 
 
 
@@ -46,7 +43,7 @@
     display: -webkit-flex;
     display: flex;
 
-    @media @bp-global-small, @product-list-medium {
+    @media @bp-global-small {
         display: block;
     }
 
@@ -57,7 +54,7 @@
         width: 33.33%;
         background-color: @contrast-color;
 
-        @media @product-list-medium, @bp-global-small{
+        @media @bp-global-small{
             width: auto;
         }
 
@@ -83,7 +80,7 @@
     width: 66.66%;
     background-color: @contrast-color-alt;
 
-    @media @product-list-medium, @bp-global-small{
+    @media  @bp-global-small{
          width: auto;
     }
 
@@ -157,11 +154,9 @@
     &:last-of-type {
         margin-right: 0;
     }
-    @media @product-list-medium {
-        min-width: 23%;
-    }
 
-    @media @product-list-medium, @mobile, @bp-global-medium {
+
+    @media  @bp-global-medium, @bp-global-small {
         min-width: 49%;
         margin-bottom: 20px;
         &:nth-child(2n) {
@@ -182,7 +177,7 @@
         text-transform: capitalize;
 
 
-        @media @product-list-small {
+        @media @bp-global-medium {
             font-size: 12px;
         }
         @media @mobile {
@@ -193,7 +188,7 @@
     // Select Wrap
 
     .select-wrap {
-        @media @product-list-small {
+        @media @bp-global-medium {
             .select.medium;
         }
         @media @mobile {
@@ -268,9 +263,9 @@
         -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row;
-        -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
         justify-content: space-between;
@@ -280,19 +275,13 @@
         -webkit-align-items: stretch;
         -ms-flex-align: stretch;
         align-items: stretch;
-
-        @media only screen and (min-width : 1001px) and (max-width : 1300px) {
-            display: block;
-        }
-
-
     }
 
     // Form Group
 
     .form-group {
         margin-bottom: 0;
-        @media @product-list-medium, @mobile, @bp-global-medium {
+        @media @mobile, @bp-global-medium {
             display: block;
         }
     }
@@ -304,7 +293,7 @@
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
 
-        @media @product-list-medium, @mobile, @bp-global-medium {
+        @media  @mobile, @bp-global-medium {
             margin-bottom: 10px;
         }
 
@@ -314,34 +303,50 @@
 
     .form-group:last-of-type {
         margin: 0;
-        @media @mobile {
 
-            // Search Icon
+    }
 
-            &:before {
+    // Clear Search Group :) Ugly I know
+
+    .form-group + .form-group + .form-group {
+        width: 100%;
+        margin-right: 10px;
+        margin-top: 10px;
+
+        .button {
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+    }
+
+
+    .button--submit {
+        @media @mobile, only screen and (min-width : 1001px) and (max-width : 1300px) {
+            width: 50px;
+            overflow: hidden;
+            text-indent: 200px;
+            display: block;
+            position: relative;
+
+            &:after {
                 content: '\f002';
                 font-family: 'FontAwesome', sans-serif;
                 position: absolute;
-                width: 40px;
+                width: 50px;
                 text-align: center;
                 line-height: 38px;
                 color: @font-swatch7-color;
                 font-size: 18px;
-            }
-
-            // Button
-
-            .button {
-                line-height: 50px;
-                width: 40px;
-                height: 40px;
-                color: transparent;
-                padding: 0;
-                position: relative;
+                top: 0;
+                left: 0;
+                text-indent: 0;
             }
         }
     }
 }
+
+
 
 
 
@@ -505,9 +510,7 @@
         line-height: 1;
         height: auto;
     }
-    @media @product-list-small {
-        margin: 16px;
-    }
+
 
     .image {
         @media @mobile {
@@ -551,11 +554,11 @@
     font-size: @font-swatch3-font-size;
     line-height: @font-swatch3-line-height;
     margin-bottom: 0.8em;
-    @media @product-list-medium, @product-list-small {
+    @media @bp-global-medium {
         font-size: bkscale(@font-swatch3-font-size, 0.82);
         line-height: bkscale(@font-swatch3-line-height, 0.82);
     }
-    @media @mobile {
+    @media @bp-global-small {
         font-size: bkscale(@font-swatch3-font-size, 0.72);
 
         line-height: bkscale(@font-swatch3-line-height, 0.72);
