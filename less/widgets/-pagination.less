@@ -1,0 +1,169 @@
+// ---------------------------------------------------
+// Facet Template: CSS > Widgets > Pagination (component)
+// ---------------------------------------------------
+
+
+
+
+// Pagination List
+// ------------------------------
+
+
+.pagination-list:not(.responsiveslideshow__pagination-list) {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    clear: both;
+    margin-bottom: 0;
+    position: relative;
+    background-color: orange;
+    margin-top: -1px;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+
+
+
+    // Pagination Item
+    // ------------------------------
+
+
+    .pagination-item:nth-child(2n) .button--pagination {
+        background-color: @spare-color-alt;
+    }
+
+
+
+
+    // Pagination Button
+    // ------------------------------
+
+
+    .button--pagination {
+        background: @spare-color;
+        color: @button-text-color;
+        font-family: @font-swatch7-font-family;
+        font-size: @font-swatch5-font-size;
+        line-height: 1;
+        display: block;
+        box-shadow: none;
+
+        @media @bp-global-large {
+            padding: 20px 70px;
+        }
+        @media @bp-global-medium {
+            padding: 20px 40px;
+        }
+        @media @bp-global-small {
+            padding: 20px 20px;
+        }
+
+        &:hover {
+            background: @spare-color-hover !important;
+        }
+
+
+
+
+        // Pagination Icons
+        // ------------------------------
+
+
+        &:before, &:after {
+            display: inline-block;
+            color: @button-text-color;
+            text-align: center;
+            margin-right: 26px;
+            font-size: 3em;
+            vertical-align: middle;
+            background-color: transparent;
+
+            @media @mobile {
+                font-size: 1em;
+            }
+        }
+    }
+
+
+    .icon--previous:before {
+        content: '\f104';
+    }
+
+
+    .icon--next:after {
+        content: '\f105';
+    }
+
+
+    .control-text {
+        box-shadow: inset 0px -1px 0px 0px fade(@button-text-color, 30%);
+        display: inline-block;
+        line-height: 1.5;
+    }
+
+
+    .button--next, .button--previous {
+
+    }
+
+
+    .button--next {
+        text-align: right;
+        &:after {
+            margin-left: 26px;
+        }
+    }
+
+
+    .button--previous {
+
+    }
+
+
+
+
+    // Pagination Number Item
+    // ------------------------------
+
+
+    .button--pagination:not(.icon) {
+        padding: 20px 70px;
+    }
+
+
+
+
+    // Pagination Number Item
+    // ------------------------------
+    .pagination-item {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+    .pagination-item.current {
+        -webkit-flex: 2 1 auto;
+        -ms-flex: 2 1 auto;
+        flex: 2 1 auto;
+        .button--pagination {
+            background: @contrast-color;
+            color: @font-swatch5-color;
+        }
+    }
+}

@@ -1,0 +1,278 @@
+// ------------------------------
+// Facet Template: CSS > Widgets > Twitter Feed
+// ------------------------------
+
+
+
+
+// Breakpoints for layout variations
+// ---------------------------------
+
+
+@twitter-feed-large: ~"only screen and (min-width : 1000px)";
+@twitter-medium: ~"only screen and (max-width : 1000px)";
+@twitter-small: ~"only screen and (max-width : 500px)";
+
+
+
+
+// 2 Columns Layout on a Large Screen
+// ----------------------------------
+
+
+@media @twitter-feed-large {
+	.widget__twitter .tweet-item {
+		width: 49%;
+		margin-right: 2%;
+		margin-bottom: 2%;
+		float: left;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
+	}
+}
+
+
+
+
+// Tweet Item
+// ------------------------------
+
+
+.tweet-item {
+	position: relative;
+}
+
+
+
+
+// Avatar
+// ------------------------------
+
+.twitter__avatar {
+
+}
+
+.twitter__avatar-image {
+	width: 40px;
+	height: 40px;
+	display: block;
+
+	@media @twitter-medium {
+		width: 30px;
+		height: 30px;
+	}
+
+	@media @twitter-small {
+		width: 26px;
+		height: 26px;
+	}
+}
+
+
+
+
+// Tweet Wrap
+// ------------------------------
+
+
+.tweet-wrap {
+
+}
+
+
+
+
+// Tweet Content
+// ------------------------------
+
+
+.tweet-content {
+    padding-top: 15px;
+    position: relative;
+    font-family: @font-swatch1-font-family;
+	font-size: @font-swatch4-font-size;
+	line-height: @font-swatch4-line-height;
+    padding-bottom: 0;
+
+    @media @twitter-medium {
+        padding-top: 10px;
+		font-size: bkscale(@font-swatch4-font-size, 0.8);
+		line-height: bkscale(@font-swatch4-line-height, 0.8);
+
+    }
+
+    @media @twitter-small {
+        padding-top: 5px;
+		font-size: bkscale(@font-swatch4-font-size, 0.68);
+		line-height: bkscale(@font-swatch4-line-height, 0.68);
+    }
+
+    // Link
+
+    a {
+        // Allows text wrap for long words without spacing
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        word-wrap: break-word;
+        hyphens: auto;
+        // Needed for Windows Mobile IE
+        display: inline-block;
+    }
+}
+
+
+
+
+// Account Link
+// ------------------------------
+
+
+.twitter__account-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    font-family: @font-swatch5-font-family;
+    line-height: 40px;
+    min-height: 40px;
+    margin-left: 55px;
+    color: @font-swatch5-color;
+
+	@media @twitter-medium {
+		min-height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+		margin-left: 40px;
+	}
+
+	@media @twitter-small {
+		min-height: 26px;
+		line-height: 26px;
+		font-size: 13px;
+		margin-left: 35px;
+	}
+
+}
+
+
+
+
+// Tweet Metadata
+// ------------------------------
+
+
+.tweet-metadata {
+	font-size: 14px;
+	line-height: 1;
+	color: fade(@font-swatch5-color, 50%);
+
+    @media @twitter-medium {
+        font-size: 10px;
+    }
+
+    a {
+        color: fade(@font-swatch5-color, 50%);
+    }
+
+}
+
+// Tweet Source
+
+.tweet-source {
+	color: fade(@font-swatch5-color, 50%);
+}
+
+// Timestamp
+
+.twitter__timestamp {
+	font-size: 14px;
+	color: @font-swatch5-color;
+    margin-right: 1em;
+    @media @twitter-medium {
+        font-size: 10px;
+    }
+}
+
+// Retweeted By
+
+.retweeted-by {
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	padding-top: 5px;
+	font-size: 10px;
+	right: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	left: -100px;
+	text-align: right;
+	line-height: 1;
+}
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+
+
+@media @bp-global-columns {
+
+
+
+
+    // All Columns
+    // ------------------------------
+
+
+    .responsivecolumns {
+
+        // Tweet Item
+
+        .widget__twitter .tweet-item {
+            width: auto;
+            float: none;
+            margin-bottom: 2em;
+        }
+
+    }
+
+
+
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        // Tweet Content
+
+        .tweet-content {
+            font-size: @font-swatch5-font-size;
+            line-height: @font-swatch5-line-height;
+        }
+
+        // Tweet Metadata
+
+        .tweet-metadata {
+            display: none;
+        }
+    }
+}

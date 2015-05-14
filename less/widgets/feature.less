@@ -1,0 +1,115 @@
+// ------------------------------------
+// Facet Template: CSS > Widgets > Feature
+// ------------------------------------
+
+
+// Horizontal version, Larger type
+@feature-x-large:   ~"only screen and (min-width : 1500px)";
+
+// Horizontal version, Smaller type
+@feature-large:     ~"only screen and (min-width : 990px) and (max-width : 1500px)";
+
+// Vertical version, Larger type
+@feature-medium:    ~"only screen and (max-width : 990px)";
+
+// Vertical version, Smaller type
+@feature-small:     ~"only screen and (max-width : 500px)";
+
+
+
+
+// Background Image
+// ------------------------------
+
+
+.feature__background-image {
+    margin-left: 33.33%;
+}
+
+
+
+
+// Content Wrap
+// ------------------------------
+
+
+.feature__content-wrap {
+    padding: 0;
+    background-color: @color-swatch2;
+    width: 50%;
+    margin-left: -50%;
+}
+
+
+
+
+
+
+// Content Inner Wrap
+// ------------------------------
+
+
+.feature__content-inner-wrap {
+    padding: 70px;
+}
+
+
+
+
+// Headline
+// ------------------------------
+
+
+.feature__headline {
+
+
+
+    @media @feature-large {
+        font-size: bkscale(@font-swatch8-font-size, 0.88);
+        line-height: bkscale(@font-swatch8-line-height, 0.88);
+    }
+    @media @feature-medium {
+        font-size: bkscale(@font-swatch8-font-size, 0.78);
+        line-height: bkscale(@font-swatch8-line-height, 0.78);
+    }
+    @media @feature-small {
+        font-size: bkscale(@font-swatch8-font-size, 0.7);
+        line-height: bkscale(@font-swatch8-line-height, 0.7);
+    }
+
+}
+
+
+
+
+// Strapline
+// ------------------------------
+
+
+.feature__strapline {
+
+
+    @media @feature-large {
+        font-size: bkscale(@font-swatch9-font-size, 0.9);
+        line-height: bkscale(@font-swatch9-line-height, 0.9);
+    }
+    @media @feature-medium {
+        font-size: bkscale(@font-swatch9-font-size, 0.8);
+        line-height: bkscale(@font-swatch9-line-height, 0.8);
+    }
+    @media @feature-small {
+        font-size: bkscale(@font-swatch9-font-size, 0.75);
+        line-height: bkscale(@font-swatch9-line-height, 0.75);
+    }
+}
+
+
+
+
+// Button
+// ------------------------------
+
+
+.feature__button {
+
+}

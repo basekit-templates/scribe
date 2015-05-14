@@ -1,0 +1,53 @@
+// ------------------------------------------
+// Facet Template: CSS > Widgets > Click to Call
+// ------------------------------------------
+
+
+.widget__clicktocall {
+
+
+
+
+    // Phone Number Link
+    // ------------------------------
+
+
+    .phone-number-link {
+        @media only screen and (min-width:480px) {
+            .underline;
+        }
+
+        @media @mobile, only screen and (max-width:700px) and (orientation:landscape) {
+            border: none;
+            padding: 0 26px;
+            font-size:  @font-swatch7-font-size;
+            line-height: bkscale(@font-swatch7-font-size, 3);
+            font-weight: @font-swatch7-font-weight;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+            text-align: left;
+            -webkit-appearance: none;
+            box-shadow: inset 0px 0px 0px 2px @font-swatch7-color;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 0;
+            position: relative;
+            z-index: 100;
+
+            // Icon
+
+            &:before {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 26px 0 -26px;
+                background-color: @font-swatch7-color;
+                color: @color-swatch1;
+                width: bkscale(@font-swatch7-font-size, 3);
+                text-align: center;
+            }
+        }
+    }
+}

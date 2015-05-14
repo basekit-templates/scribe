@@ -1,0 +1,694 @@
+// ---------------------------------------------------------
+// Facet Template: CSS > Plugins > Ecommerce > Products Listing
+// ---------------------------------------------------------
+
+
+
+
+// ------------------------------
+// Widget Layout Breakpoints
+// ------------------------------
+
+
+
+
+@product-list-large: ~"only screen and (min-width : 890px)";
+@product-list-medium: ~"only screen and (min-width : 600px) and (max-width : 1000px)";
+@product-list-small: ~"only screen and (min-width : 400px) and (max-width : 600px)";
+
+
+
+
+// Product Listing Title
+// ------------------------------
+
+
+.ecomproductslist__listing-title {
+    display: none;
+}
+
+
+
+
+// ------------------------------
+// Product Listing Filters
+// ------------------------------
+
+
+
+
+// Product Search in Widget
+// ------------------------------
+
+
+.widget__ecomproductslist .form {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    @media @bp-global-small, @product-list-medium {
+        display: block;
+    }
+
+    // Fieldset Search
+
+    .fieldset--search {
+        padding: 20px 70px;
+        width: 33.33%;
+        background-color: @contrast-color;
+
+        @media @product-list-medium, @bp-global-small{
+            width: auto;
+        }
+
+        @media @bp-global-medium {
+            padding: 20px 40px;
+        }
+
+        @media @bp-global-small {
+            padding: 20px;
+        }
+    }
+}
+
+
+
+
+// Products List Fieldset Filters
+// ------------------------------
+
+
+.ecomproductslist__fieldset--filters {
+    padding: 20px 70px;
+    width: 66.66%;
+    background-color: @contrast-color-alt;
+
+    @media @product-list-medium, @bp-global-small{
+         width: auto;
+    }
+
+    @media @bp-global-medium {
+            padding: 20px 40px;
+        }
+
+    @media @bp-global-small {
+        padding: 20px 20px 0 20px;
+    }
+}
+
+
+
+
+// Form Body
+// ------------------------------
+
+
+.ecomproductslist__fieldset--filters .form-body{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+
+
+}
+
+
+
+
+// Product Listing Legend
+// ------------------------------
+
+
+.ecomproductslist__legend {
+    display: none;
+}
+
+
+
+
+// Product Listing Form Group
+// ------------------------------
+
+
+.ecomproductslist__fieldset--filters .form-group {
+    min-width: 15%;
+    width: auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin-right: 1.3%;
+    width: 24%;
+    margin-bottom: 0;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+    @media @product-list-medium {
+        min-width: 23%;
+    }
+
+    @media @product-list-medium, @mobile, @bp-global-medium {
+        min-width: 49%;
+        margin-bottom: 20px;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+    }
+
+
+    // Label
+
+    .label {
+        font-size: 13px;
+        line-height: 1;
+        color: fade(@paragraph-color, 70%);
+        display: block;
+        padding-bottom: 0;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+
+
+        @media @product-list-small {
+            font-size: 12px;
+        }
+        @media @mobile {
+            font-size: 12px;
+        }
+    }
+
+    // Select Wrap
+
+    .select-wrap {
+        @media @product-list-small {
+            .select.medium;
+        }
+        @media @mobile {
+            .select.small;
+        }
+    }
+}
+
+
+
+
+
+// Label
+// ------------------------------
+
+
+.ecomproductslist__fieldset--search .label {
+    display: none;
+}
+
+
+
+
+// ------------------------------
+// Listing Order
+// ------------------------------
+
+
+.listing-order {
+    clear: both;
+    font-size: bkscale(@font-swatch5-font-size, 0.72);
+    line-height: bkscale(@font-swatch5-line-height, 0.72);
+    color: fade(@paragraph-color, 80%);
+    border-bottom: 1px solid fade(@font-swatch5-color, 16%);
+
+    @media @bp-global-large {
+        padding: 20px 70px;
+    }
+    @media @bp-global-medium {
+        padding: 16px 40px;
+    }
+    @media @bp-global-small {
+        padding: 12px 20px;
+        font-size: bkscale(@font-swatch5-font-size, 0.65);
+        line-height: bkscale(@font-swatch5-line-height, 0.65);
+    }
+}
+
+
+
+
+// ------------------------------
+// Product Listing Search
+// ------------------------------
+
+
+
+
+
+// Search Fieldset
+// ------------------------------
+
+
+.ecomproductslist__fieldset--search {
+
+    // Form Body
+
+    .form-body {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+
+        @media only screen and (min-width : 1001px) and (max-width : 1300px) {
+            display: block;
+        }
+
+
+    }
+
+    // Form Group
+
+    .form-group {
+        margin-bottom: 0;
+        @media @product-list-medium, @mobile, @bp-global-medium {
+            display: block;
+        }
+    }
+
+    // First Form Group
+
+    .form-group:first-of-type {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+
+        @media @product-list-medium, @mobile, @bp-global-medium {
+            margin-bottom: 10px;
+        }
+
+        .input {
+            height: 50px;
+            @media @mobile {
+                height: 40px;
+            }
+        }
+    }
+
+    // Last Form Group
+
+    .form-group:last-of-type {
+        margin: 0;
+        @media @mobile {
+
+            // Search Icon
+
+            &:before {
+                content: '\f002';
+                font-family: 'FontAwesome', sans-serif;
+                position: absolute;
+                width: 40px;
+                text-align: center;
+                line-height: 38px;
+                color: @font-swatch7-color;
+                font-size: 18px;
+            }
+
+            // Button
+
+            .button {
+                line-height: 50px;
+                width: 40px;
+                height: 40px;
+                color: transparent;
+                padding: 0;
+                position: relative;
+            }
+        }
+    }
+}
+
+
+
+
+// ------------------------------
+// Product List
+// ------------------------------
+
+
+
+
+// Listing Body
+// ------------------------------
+
+
+.listing-body {
+    clear: both;
+}
+
+
+
+
+// Product List
+// ------------------------------
+
+
+.product-list {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+
+
+
+// Product Item
+// ------------------------------
+
+
+.product-item {
+    border-right: 1px solid fade(@font-swatch5-color, 16%);
+    box-shadow: inset 0px -1px 0px 0px fade(@font-swatch5-color, 16%);
+
+    @media @bp-global-large {
+        padding: 70px;
+    }
+
+    @media @bp-global-medium {
+        padding: 40px;
+    }
+
+    @media @bp-global-small {
+        padding: 20px;
+    }
+
+
+
+    // Clickable item, class added via JS
+
+    &.clickable {
+        cursor: pointer;
+        -webkit-transition: all 0.1s ease-in-out;
+        -moz-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+            box-shadow: inset 0px 0px 0px 6px fade(@font-swatch5-color, 16%);
+
+            // Title Link
+
+            .title-link {
+                box-shadow: inset 0px -2px 0px 0px #235071;
+                color: #17344a;
+            }
+        }
+    }
+}
+
+
+
+
+// Listing Layout Variations
+// ------------------------------
+
+
+// 4 Columns
+
+@media @bp-global-large {
+
+    // Product Item
+
+    .product-item {
+        width: 25%;
+        margin: 0;
+    }
+}
+
+
+// 3 Columns
+
+@media @bp-global-medium {
+
+    // Product Item
+
+    .product-item {
+        width: 33.33%;
+    }
+}
+
+
+// 2 Columns
+
+@media @bp-global-small {
+
+    // Product Item
+
+    .product-item {
+        width: 50%;
+    }
+}
+
+
+// 1 Column
+
+@media @mobile {
+
+    // Product Item
+
+    .product-item {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+
+
+// Product Item Image
+// ------------------------------
+
+
+.product-item-image  {
+    background-color: transparent;
+    width: auto;
+    @media @mobile {
+        line-height: 1;
+        height: auto;
+    }
+    @media @product-list-small {
+        margin: 16px;
+    }
+
+    .image {
+        @media @mobile {
+            max-height: 200px;
+        }
+    }
+}
+
+
+// Image Link
+
+.product-item-image .image-link {
+    background-color: transparent;
+    @media @mobile {
+        line-height: 1;
+        height: auto;
+    }
+}
+
+
+
+
+
+// Product Item Details
+// ------------------------------
+
+
+.product-item-details {
+    text-align: center;
+    @media @mobile {
+        margin: 4px 16px 12px;
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+
+// Item Title
+
+.product-item-title {
+    font-size: @font-swatch3-font-size;
+    line-height: @font-swatch3-line-height;
+    margin-bottom: 0.8em;
+    @media @product-list-medium, @product-list-small {
+        font-size: bkscale(@font-swatch3-font-size, 0.82);
+        line-height: bkscale(@font-swatch3-line-height, 0.82);
+    }
+    @media @mobile {
+        font-size: bkscale(@font-swatch3-font-size, 0.72);
+
+        line-height: bkscale(@font-swatch3-line-height, 0.72);
+    }
+     // Title Links
+
+    .title-link {
+        .underline;
+        color: @font-swatch5-color;
+    }
+}
+
+
+
+
+// Item Price
+
+.product-item-price {
+    font-size: bkscale(@font-swatch5-font-size, 0.82);
+    line-height: bkscale(@font-swatch5-line-height, 0.82);
+    color: @font-swatch5-color;
+    @media @mobile {
+        font-size: bkscale(@font-swatch5-font-size, 0.7);
+        line-height: bkscale(@font-swatch5-line-height, 0.7);
+    }
+}
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+
+
+@media @bp-global-columns {
+
+
+
+
+    // All Columns
+    // ------------------------------
+
+
+    .responsivecolumns {
+
+        // Item Article
+
+        .product-item-article {
+            padding: 1px 0;
+        }
+
+        // Product Item
+
+        .product-item {
+            width: 49%;
+            margin: 0 2% 2% 0;
+
+            // Last Column Item
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+
+        // Listing Title
+
+        .ecomproductslist__listing-title {
+            float: none;
+        }
+
+        // Search
+
+        .widget__ecomproductslist .form .fieldset--search {
+            float: none;
+        }
+
+
+    }
+
+    // 3 and 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        // Form Body
+
+        .ecomproductslist__fieldset--filters .form-body {
+            display: block;
+        }
+
+        // Form Group
+
+        .ecomproductslist__fieldset--filters .form-group {
+            width: 100%;
+            display: block;
+            max-width: 100%;
+        }
+
+        // Products List
+
+        .product-list {
+            display: block;
+        }
+
+        // Product Item
+
+        .product-item {
+            width: auto;
+            margin: 0 0 2% 0;
+
+            // Last Column Item
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
