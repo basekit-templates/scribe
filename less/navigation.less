@@ -154,16 +154,16 @@
 
 
 
-.navigation-body .navigation-item.selected:not(.folder) > .item-name {
+.navigation-body .navigation-item.selected:not(.open) > .item-name {
 	background-color: @color-swatch2;
 	color: @color-swatch5;
 }
 
 // Hover
 
-.navigation-body .navigation-item:not(.folder).selected:hover > .item-name {
+.navigation-body .navigation-item.selected:not(.open):hover > .item-name {
 	box-shadow: none;
-	background-color: @contrast-color-alt;
+	background-color: @color-swatch2;
 
 }
 
