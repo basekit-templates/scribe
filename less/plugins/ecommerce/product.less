@@ -356,6 +356,28 @@
 
 
 
+// Product Price
+// ------------------------------
+
+
+.ecomproduct__product-price {
+    color: @font-swatch5-color;
+    @media @bp-global-large {
+        font-size: @font-swatch2-font-size;
+        line-height: @font-swatch2-line-height;
+    }
+    @media @bp-global-medium {
+        font-size: @font-swatch3-font-size;
+        line-height: @font-swatch3-line-height;
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font-swatch3-font-size, 0.8);
+        line-height: bkscale(@font-swatch3-line-height, 0.8);
+    }
+}
+
+
+
 // ------------------------------
 // Product Body
 // ------------------------------
