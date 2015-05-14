@@ -349,3 +349,50 @@
 	line-height: bkscale(@font-swatch7-font-size, 2);
 	font-size:  bkscale(@font-swatch7-font-size, 0.8);
 }
+
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+@media @bp-global-columns {
+	.responsivecolumns {
+
+		// Blockquote
+
+		.content blockquote {
+			width: 100%;
+		}
+
+
+		// 4 columns
+		// ------------------------------
+
+
+		.columns-four-first,
+		.columns-four-second,
+		.columns-four-third,
+		.columns-four-fourth {
+
+			// Blockquote
+
+			.content blockquote {
+				padding-right: 0;
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}
