@@ -5,22 +5,12 @@
 
 
 
-// Breakpoints for layout variations
-// ---------------------------------
-
-
-@twitter-feed-large: ~"only screen and (min-width : 1000px)";
-@twitter-medium: ~"only screen and (max-width : 1000px)";
-@twitter-small: ~"only screen and (max-width : 500px)";
-
-
-
 
 // 2 Columns Layout on a Large Screen
 // ----------------------------------
 
 
-@media @twitter-feed-large {
+@media @bp-global-large, @bp-global-medium {
 	.widget__twitter .tweet-item {
 		width: 49%;
 		margin-right: 2%;
@@ -58,12 +48,12 @@
 	height: 40px;
 	display: block;
 
-	@media @twitter-medium {
+	@media @bp-global-medium {
 		width: 30px;
 		height: 30px;
 	}
 
-	@media @twitter-small {
+	@media @bp-global-small {
 		width: 26px;
 		height: 26px;
 	}
@@ -95,14 +85,14 @@
 	line-height: @font-swatch4-line-height;
     padding-bottom: 0;
 
-    @media @twitter-medium {
+    @media @bp-global-medium {
         padding-top: 10px;
 		font-size: bkscale(@font-swatch4-font-size, 0.8);
 		line-height: bkscale(@font-swatch4-line-height, 0.8);
 
     }
 
-    @media @twitter-small {
+    @media @bp-global-small {
         padding-top: 5px;
 		font-size: bkscale(@font-swatch4-font-size, 0.68);
 		line-height: bkscale(@font-swatch4-line-height, 0.68);
@@ -142,14 +132,14 @@
     margin-left: 55px;
     color: @font-swatch5-color;
 
-	@media @twitter-medium {
+	@media @bp-global-medium {
 		min-height: 30px;
 		line-height: 30px;
 		font-size: 14px;
 		margin-left: 40px;
 	}
 
-	@media @twitter-small {
+	@media @bp-global-small {
 		min-height: 26px;
 		line-height: 26px;
 		font-size: 13px;
@@ -170,7 +160,7 @@
 	line-height: 1;
 	color: fade(@font-swatch5-color, 50%);
 
-    @media @twitter-medium {
+    @media @bp-global-small {
         font-size: 10px;
     }
 
@@ -192,7 +182,7 @@
 	font-size: 14px;
 	color: @font-swatch5-color;
     margin-right: 1em;
-    @media @twitter-medium {
+    @media @bp-global-small {
         font-size: 10px;
     }
 }
