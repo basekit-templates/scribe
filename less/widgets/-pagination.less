@@ -15,7 +15,6 @@
     clear: both;
     margin-bottom: 0;
     position: relative;
-    background-color: orange;
     margin-top: -1px;
 
     display: -ms-flexbox;
@@ -44,8 +43,18 @@
     // ------------------------------
 
 
-    .pagination-item:nth-child(2n) .button--pagination {
-        background-color: @spare-color-alt;
+    @media @bp-global-large {
+        .pagination-item:nth-child(2n) .button--pagination {
+            background-color: @spare-color-alt;
+        }
+    }
+
+    @media @bp-global-small {
+        .pagination-item:nth-child {
+            -webkit-flex: 0 1 50%;
+            -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+        }
     }
 
 
@@ -98,7 +107,7 @@
             width: auto;
 
             @media @mobile {
-                font-size: 1em;
+                font-size: 2em;
             }
         }
     }
@@ -135,7 +144,7 @@
 
 
     .button--previous {
-
+        text-align: left;
     }
 
 
