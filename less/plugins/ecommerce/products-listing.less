@@ -616,17 +616,31 @@
 
     .responsivecolumns {
 
+
+
+        .widget__ecomproductslist .form {
+            display: block;
+        }
+
         // Search and Filter Fieldsets
 
         .widget__ecomproductslist .form .fieldset--search, .ecomproductslist__fieldset--filters {
             background-color: transparent;
             padding: 0;
+            width: auto;
+            margin: 0 0 1em 0;
         }
 
         // Listing Order
 
         .listing-order {
-            padding: 0;
+            display: none;
+        }
+
+        // Product List
+
+        .product-list {
+            border-left: 1px solid rgba(66,77,81,0.16);
         }
 
         // Item Article
@@ -640,12 +654,6 @@
         .product-item {
             width: 50%;
             margin: 0;
-
-            // Last Column Item
-
-            &:nth-child(1n) {
-                border-right: 1px solid rgba(66,77,81,0.16);
-            }
         }
 
         // Listing Title
@@ -675,15 +683,17 @@
     .columns-three-right,
     .columns-three-middle {
 
+        // Products List
 
+        .product-list {
+            display: block;
+        }
 
         // Product Item
 
         .product-item {
             width: auto;
             margin: 0;
-
-
         }
     }
 }
