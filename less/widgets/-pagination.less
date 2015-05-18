@@ -43,8 +43,14 @@
     // ------------------------------
 
 
-    @media @bp-global-large {
+    @media @bp-global-large, @bp-global-medium {
         .pagination-item:nth-child(2n) .button--pagination {
+            background-color: @spare-color-alt;
+        }
+    }
+
+    @media @bp-global-small {
+        .pagination-item:nth-child(2n+1) .button--pagination {
             background-color: @spare-color-alt;
         }
     }
