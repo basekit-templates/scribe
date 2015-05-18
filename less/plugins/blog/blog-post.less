@@ -305,17 +305,23 @@
     // Network Item
 
     .blogpost__network-item {
-        @media @bp-global-large, @bp-global-medium {
-            width: 32%;
+        @media @bp-global-medium {
+            display: block;
         }
 
-        @media @bp-blog-post-layout-vertical {
-            width: 100%;
-        }
+
 
 
         .button {
-            width: 100%;
+
+            box-shadow: none;
+
+            &:before {
+                background-color: transparent;
+                color: @font-swatch7-color;
+                margin: 0 auto;
+                box-shadow: inset 0px 0px 0px 2px @font-swatch7-color;
+            }
         }
     }
 }
