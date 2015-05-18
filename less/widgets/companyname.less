@@ -8,11 +8,12 @@
     &:hover {
         text-decoration: none;
     }
-    @media @bp-global-medium {
+    @media @bp-global-medium, @bp-global-small {
         display: inline-block;
         vertical-align: middle;
     }
     @media @bp-global-small {
-        font-size: bkscale(@font-swatch10-font-size, 0.8);
+        font-size: bkscale(@font-swatch10-font-size, 0.7);
+        padding: 6px 0;
     }
 }
