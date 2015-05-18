@@ -266,6 +266,12 @@
             width: 50%;
         }
 
+        // Post Content
+
+        .post-content {
+            padding-bottom: 1em;
+        }
+
         // Timestamp
 
         .post-footer .timestamp {
@@ -275,8 +281,9 @@
 
         // Read more
 
-        .blogpostlist .read-more {
+        .read-more {
             position: relative;
+            margin: 0;
         }
     }
 
@@ -291,7 +298,7 @@
     .columns-three-left,
     .columns-three-right,
     .columns-three-middle {
-        .blogpostlist {
+        .post-items {
 
             display: block;
 
@@ -299,6 +306,19 @@
 
             .post-article {
                 width: auto;
+                background-color: transparent !important;
+            }
+
+            // Post Content
+
+            .post-content {
+                padding: 1em 0;
+            }
+
+            // Timestamp
+
+            .post-footer .timestamp {
+                padding: 0 0 2em 0;
             }
         }
     }
