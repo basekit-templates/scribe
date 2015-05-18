@@ -50,7 +50,11 @@
     }
 
     @media @bp-global-small {
-        .pagination-item:nth-child(2n+1) .button--pagination {
+
+        .pagination-item:nth-child(4n) .button--pagination, .pagination-item:nth-child(4n-3) .button--pagination {
+            background-color: @spare-color;
+        }
+        .pagination-item:nth-child(4n-2) .button--pagination, .pagination-item:nth-child(4n-1) .button--pagination {
             background-color: @spare-color-alt;
         }
     }
@@ -169,9 +173,10 @@
         flex: 1 1 auto;
 
         @media @bp-global-small {
-            -webkit-flex: 1 1 50%;
-            -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
+            -webkit-flex: 0 1 50%;
+            -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+            width: 50%;
         }
     }
 
