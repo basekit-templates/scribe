@@ -296,6 +296,10 @@
 	table {
 		overflow: auto;
 		width: 100%;
+		border: none;
+		border-collapse: separate;
+	  	border-spacing: 2px;
+	  	margin: 2em 0;
 
 		@media @bp-global-medium {
 			font-size: bkscale(@font-swatch5-font-size, 0.9);
@@ -308,11 +312,18 @@
 		}
 	}
 
+	// Table Cell
+
+	td, th {
+		border: none;
+		background-color: lighten(desaturate(@color-swatch2, 80%), 14%);
+		color: @font-swatch5-color;
+	}
+
 	// Thead
 
-
 	table thead td {
-		background-color: fade(@color-swatch5, 10%);
+		background-color: @color-swatch2;
 	}
 
 
@@ -324,7 +335,7 @@
 
 	hr {
 		height: 5px;
-		background-color: red;
+		background-color: @color-swatch2;
 		border: none;
 		margin: 2em 0;
 
