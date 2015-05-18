@@ -49,13 +49,7 @@
         }
     }
 
-    @media @bp-global-small {
-        .pagination-item:nth-child {
-            -webkit-flex: 0 1 50%;
-            -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
-        }
-    }
+
 
 
 
@@ -167,12 +161,23 @@
         -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
+
+        @media @bp-global-small {
+            -webkit-flex: 1 1 50%;
+            -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+        }
     }
 
     .pagination-item.current {
         -webkit-flex: 2 1 auto;
         -ms-flex: 2 1 auto;
         flex: 2 1 auto;
+        @media @bp-global-small {
+            -webkit-flex: 1 1 50%;
+            -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+        }
         .button--pagination {
             background: @contrast-color;
             color: @font-swatch5-color;
