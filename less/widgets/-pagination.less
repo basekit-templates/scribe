@@ -45,17 +45,17 @@
 
     @media @bp-global-large, @bp-global-medium {
         .pagination-item:nth-child(2n) .button--pagination {
-            background-color: @spare-color-alt;
+            background-color: @color-swatch7-alt;
         }
     }
 
     @media @bp-global-small {
 
         .pagination-item:nth-child(4n) .button--pagination, .pagination-item:nth-child(4n-3) .button--pagination {
-            background-color: @spare-color;
+            background-color: @color-swatch7;
         }
         .pagination-item:nth-child(4n-2) .button--pagination, .pagination-item:nth-child(4n-1) .button--pagination {
-            background-color: @spare-color-alt;
+            background-color: @color-swatch7-alt;
         }
     }
 
@@ -69,8 +69,8 @@
 
 
     .button--pagination {
-        background: @spare-color;
-        color: @button-text-color;
+        background: @color-swatch7;
+        color: @color-swatch6;
         font-family: @font-swatch7-font-family;
         font-size: @font-swatch5-font-size;
         line-height: 1;
@@ -89,7 +89,7 @@
         }
 
         &:hover {
-            background: @spare-color-hover !important;
+            background: @color-swatch7-hover !important;
         }
 
 
@@ -128,7 +128,7 @@
 
 
     .control-text {
-        box-shadow: inset 0px -1px 0px 0px fade(@button-text-color, 30%);
+        box-shadow: inset 0px -1px 0px 0px fade(@color-swatch6, 30%);
         display: inline-block;
         line-height: 1.5;
     }
@@ -190,7 +190,7 @@
             flex: 1 1 50%;
         }
         .button--pagination {
-            background: @contrast-color;
+            background: @color-swatch2;
             color: @font-swatch5-color;
         }
     }
