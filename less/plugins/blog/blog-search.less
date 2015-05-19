@@ -119,7 +119,7 @@
     }
 
     .button--submit {
-        @media @mobile, only screen and (min-width : 1001px) and (max-width : 1300px) {
+        @media @bp-global-small {
             width: 50px;
             overflow: hidden;
             text-indent: 200px;
@@ -132,7 +132,7 @@
                 font-family: 'FontAwesome', sans-serif;
                 position: absolute;
                 text-align: center;
-                line-height: bkscale(@font-swatch7-font-size, 3);
+                line-height: bkscale(@font-swatch7-font-size, 2.2);
                 color: @font-swatch7-color;
                 font-size: 18px;
                 top: 0;
@@ -140,11 +140,6 @@
                 bottom: 0;
                 right: 0;
                 text-indent: 0;
-            }
-        }
-        @media @mobile {
-            &:after {
-                line-height: bkscale(@font-swatch7-font-size, 2.2);
             }
         }
     }
