@@ -752,46 +752,26 @@
 
 
 
+// All Columns
+// ------------------------------
 
 
-@media @bp-global-columns {
+.responsivecolumns {
+    .menu-items, .menu-list {
+        display: block;
+    }
 
+    .menu-item {
+        width: auto;
 
+    }
 
+    .widget[data-name="menusections"] + .widget[data-name="menu"] {
+        margin-top: 0;
+    }
 
-    // All Columns
-    // ------------------------------
-
-
-    .responsivecolumns {
-
-        // Item Content
-
-        .menu-item .item-content {
-            display: block;
-        }
-
-        // Item Description, Item Footer
-
-        .menu-item .item-description, .menu-item .item-footer {
-            border-left: none;
-            padding: 0;
-            margin: 0;
-            width: auto;
-        }
-
-        // Item Article
-
-        .menu-item .item-article {
-            display: block;
-            padding-bottom: 10px;
-        }
-
-        // Menu Image
-
-        .menu-item .item-image {
-            width: auto;
-            margin-right: 0;
-        }
+    .menusections-list {
+        padding: 0;
+        background: transparent;
     }
 }
