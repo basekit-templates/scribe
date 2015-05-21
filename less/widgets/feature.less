@@ -67,9 +67,10 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: -webkit-linear-gradient(44deg, rgba(255,255,255,0.76) 0%, rgba(255,255,255,0.56) 100%);
-        background-image: -o-linear-gradient(44deg, rgba(255,255,255,0.76) 0%, rgba(255,255,255,0.56) 100%);
-        background-image: linear-gradient(134deg, rgba(255,255,255,0.76) 0%, rgba(255,255,255,0.56) 100%);
+        background-image: -webkit-linear-gradient(44deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.07) 100%);
+        background-image: -o-linear-gradient(44deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.07) 100%);
+        background-image: linear-gradient(134deg, rgba(0,0,0,0.16) 0%, rgba(0,0,0,0.07) 100%);
+
     }
 }
 
@@ -172,6 +173,9 @@
 
 .feature__button {
     margin: 15px 0;
+   box-shadow: inset 0px 0px 0px 2px @color-swatch1;
+    color: @color-swatch1;
+
     @media @bp-global-medium, @bp-global-small {
         margin: 10px 0;
     }
