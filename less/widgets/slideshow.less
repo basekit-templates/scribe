@@ -4,6 +4,18 @@
 
 
 
+// ---------------------------------
+// Breakpoints for slideshow layouts
+// ---------------------------------
+
+
+@slideshow-large: ~"only screen and (min-width : 1300px)";
+@slideshow-medium: ~"only screen and (min-width : 850px) and (max-width : 1300px)";
+@slideshow-small: ~"only screen and (max-width : 850px)";
+
+
+
+
 
 .responsiveslideshow__slide-item {
 	display: block !important;
@@ -155,7 +167,7 @@
 		}
 
 		&:hover {
-			//xxx background-color: @color-swatch2-alt;
+			background-color: @color-swatch2-alt;
 		}
 
 		&:before {
@@ -256,7 +268,7 @@
 
 
 
----------------------------
+// ------------------------------
 // Slideshow Captions
 // ------------------------------
 
@@ -472,24 +484,25 @@
 // ------------------------------
 
 
+@media @bp-global-columns {
+	.responsivecolumns {
 
-.responsivecolumns {
+		// Slideshow Navigation
 
-	// Slideshow Navigation
-
-	.slide-navigation {
-		background-color: transparent;
-	}
-
-
-	// 4 columns
-	// ------------------------------
+		.slide-navigation {
+			background-color: transparent;
+		}
 
 
-	.columns-four-first,
-	.columns-four-second,
-	.columns-four-third,
-	.columns-four-fourth {
+		// 4 columns
+		// ------------------------------
 
+
+		.columns-four-first,
+		.columns-four-second,
+		.columns-four-third,
+		.columns-four-fourth {
+
+		}
 	}
 }
