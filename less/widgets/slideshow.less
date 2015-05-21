@@ -108,3 +108,388 @@
 }
 
 
+
+
+// ------------------------------
+// Slide Navigation
+// ------------------------------
+
+
+.slide-navigation {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	min-height: 50px;
+	background-color: @color-swatch2;
+	margin: 0;
+
+	@media @bp-global-small {
+		min-height: 40px;
+	}
+
+
+
+
+	// Button
+	// ------------------------------
+
+
+	.button {
+		position: absolute;
+		top: 0;
+		padding: 0;
+		display: block;
+		text-align: center;
+		background-color: transparent;
+		box-shadow: none;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		font-size: 36px;
+		@media @bp-global-small {
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+		}
+
+		&:hover {
+			//xxx background-color: @color-swatch2-alt;
+		}
+
+		&:before {
+			margin: 0;
+			color: @font-swatch7-color;
+			background-color: transparent;
+		}
+	}
+
+
+
+
+	// Control Text
+	// ------------------------------
+
+
+	.control-text {
+		display: none;
+	}
+}
+
+
+
+
+// Previous Button
+// ------------------------------
+
+
+.responsiveslideshow__previous-button {
+	left: 0;
+	// Icon
+
+	&:before {
+		content: '\f104';
+		display: block;
+		margin: 0;
+	}
+}
+
+
+
+
+// Next Button
+// ------------------------------
+
+
+.responsiveslideshow__next-button {
+	right: 0;
+
+	// Icon
+
+	&:after {
+		content: '\f105';
+		display: block;
+		margin: 0;
+		padding-left: 0.1em;
+	}
+}
+
+
+
+
+// Pause Toggle
+// ------------------------------
+
+
+.responsiveslideshow__pause-toggle {
+	left: 51px;
+
+	@media @bp-global-small {
+		left: 50%;
+		margin-left: -20px;
+	}
+
+	.pause-toggle-only & {
+		left: 0;
+		@media @bp-global-small {
+			left: 0;
+  			margin-left: 0;
+		}
+	}
+	// Icon
+
+	&:before {
+		display: block;
+		margin: 0;
+		font-size: 14px;
+	}
+
+	// Play Icon
+
+	&.pause:before {
+		content: '\f04b';
+	}
+}
+
+
+
+
+
+---------------------------
+// Slideshow Captions
+// ------------------------------
+
+
+
+
+// Caption
+// ------------------------------
+
+
+.responsiveslideshow .caption {
+
+}
+
+
+
+
+// Image Title, Image Description
+// ------------------------------
+
+
+.responsiveslideshow__image-title, .responsiveslideshow__image-description {
+	width: auto;
+}
+
+
+
+
+// Image Title
+// ------------------------------
+
+
+.responsiveslideshow__image-title {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	&:after {
+		display: none;
+	}
+}
+
+
+
+
+// Image Description
+// ------------------------------
+
+
+.responsiveslideshow__image-description {
+
+}
+
+
+
+// Caption
+
+.responsiveslideshow .caption {
+	position: absolute;
+	width: auto;
+	left: 0;
+	bottom: 0;
+	right: auto;
+	padding: 7px 10px;
+	background-color: fade(@color-swatch1, 50%);
+
+	@media @bp-global-medium {
+		padding: 10px 25px 15px;
+	}
+
+	@media @bp-global-small {
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding: 5px 20px 5px;
+	}
+
+}
+
+
+
+
+
+
+
+// ------------------------------
+// Slideshow Pagination
+// ------------------------------
+
+
+
+
+
+// Pagination Item
+// ------------------------------
+
+
+.responsiveslideshow .responsiveslideshow__pagination-item {
+
+	// Button
+
+	.button {
+		background-color: @font-swatch7-color;
+		line-height: 1;
+		&:hover {
+			background-color: transparent;
+			box-shadow: inset 0px 0px 0px 5px @font-swatch7-color;
+		}
+	}
+
+	// Selected Button
+
+	&.selected .button {
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 2px @font-swatch7-color;
+	}
+}
+
+
+
+
+
+
+
+
+// Slide Pagination
+// ------------------------------
+
+.slide-pagination {
+	position: absolute;
+	bottom: 0;
+	left: 101px;
+	right: 101px;
+	min-height: 50px;
+
+	@media @bp-global-small {
+		min-height: 40px;
+		top: 0;
+		bottom: auto;
+		left: 0;
+		right: 0;
+		min-height: 0;
+
+	}
+}
+
+
+
+// Pagination List
+// ------------------------------
+
+
+.responsiveslideshow__pagination-list {
+	text-align: center;
+	font-size: 0.1px;
+	min-height: 50px;
+	overflow: hidden;
+	padding-top: 14px;
+
+	@media @bp-global-small {
+		padding-top: 10px;
+	}
+}
+
+
+
+
+// Pagination Item
+// ------------------------------
+
+
+.responsiveslideshow__pagination-item {
+	display: inline-block;
+	margin: 3px 3px;
+
+	// Button
+
+	.button {
+		width: 14px;
+		height: 14px;
+		display: block;
+		overflow: hidden;
+		text-indent: -120%;
+		border-radius: 7px;
+		padding: 0;
+
+		@media @bp-global-small {
+			width: 8px;
+			height: 8px;
+		}
+	}
+
+	// Selected Button
+
+	&.selected .button {
+		background-color: @color-swatch7;
+	}
+}
+
+
+
+
+
+
+// ---------------------------------
+// Columns variations
+// ---------------------------------
+
+
+
+
+// All Columns
+// ------------------------------
+
+
+
+.responsivecolumns {
+
+	// Slideshow Navigation
+
+	.slide-navigation {
+		background-color: transparent;
+	}
+
+
+	// 4 columns
+	// ------------------------------
+
+
+	.columns-four-first,
+	.columns-four-second,
+	.columns-four-third,
+	.columns-four-fourth {
+
+	}
+}
