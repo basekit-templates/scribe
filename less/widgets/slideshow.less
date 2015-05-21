@@ -35,3 +35,76 @@
 
 
 
+
+
+
+// ------------------------------
+// Responsive Slideshow
+// ------------------------------
+
+.widget__responsiveslideshow {
+	position: relative;
+	padding-bottom: 50px;
+
+	@media @bp-global-small {
+		padding-bottom: 40px;
+	}
+
+	// Figure
+
+	.figure {
+		min-height: 0;
+	}
+}
+
+
+
+
+// ------------------------------
+// Slides List
+// ------------------------------
+
+.responsiveslideshow__slides-list {
+	min-height: 100px;
+	padding-bottom: 50%;
+	position: relative;
+	overflow: hidden;
+}
+
+
+// ------------------------------
+// Slideshow Item
+// ------------------------------
+
+
+.responsiveslideshow__slide-item {
+	position: relative;
+}
+
+// Prevents two slides from displaying at the same time
+// because of slow JS state changes
+
+.slide-item.current + .slide-item {
+	display: none;
+}
+
+.responsiveslideshow__image {
+	display: none;
+}
+
+
+
+
+// ------------------------------
+// Figure
+// ------------------------------
+
+
+.responsiveslideshow__figure {
+	min-height: 100px;
+	padding-bottom: 50%;
+	background-size: cover;
+	background-position: center;
+}
+
+
