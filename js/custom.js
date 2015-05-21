@@ -1,7 +1,3 @@
-$(function() {
-    FastClick.attach(document.body);
-});
-
 // Makes the whole ecom product tiles clickable
 $(document).ready(function() {
 
@@ -58,5 +54,4 @@ $(document).ready(function() {
             $('ul.product-gallery li:last').prependTo('ul.product-gallery');
         }
     });
-
 });
