@@ -176,11 +176,13 @@
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
 
-        @media @bp-global-small {
-            -webkit-flex: 0 1 50%;
-            -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
-            width: 50%;
+        &:not(.blogpostlist__button) {
+            @media @bp-global-small {
+                -webkit-flex: 0 1 50%;
+                -ms-flex: 0 1 50%;
+                flex: 0 1 50%;
+                width: 50%;
+            }
         }
     }
 
