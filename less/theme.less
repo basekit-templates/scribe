@@ -3,17 +3,18 @@
 // ------------------------------
 
 // 1. #Global Breakpoints
-// 2. #Floating Footer Fix
-// 3. #Header
-// 4. #Footer
-// 5. #Main Zone
-// 6. #Typography
+// 2. #Color Swatches
+// 3. #Floating Footer Fix
+// 4. #Header
+// 5. #Footer
+// 6. #Main Zone
+// 7. #Typography
 
 
 
 
 // ------------------------------
-// 1. #Global Break Points
+// 1. #Global Breakpoints
 // ------------------------------
 
 // Page is contained and centered
@@ -30,6 +31,10 @@
 @bp-global-columns:   ~"only screen and (min-width : 478px)";
 
 
+
+// ------------------------------
+// 2. #Color Swatches
+// ------------------------------
 
 
 @content-background: darken(@color-swatch1, 12%);
@@ -68,13 +73,14 @@ body {
 
 
 // ------------------------------
-// 2. #Floating Footer Fix
+// 3. #Floating Footer Fix
 // ------------------------------
+
+
 
 
 // Avoids Floating Footer
 // ------------------------------
-
 
 
 .page-content > .container {
@@ -120,7 +126,7 @@ body {
 
 
 // ------------------------------
-// 3. #Header
+// 4. #Header
 // ------------------------------
 
 
@@ -212,21 +218,17 @@ body {
 .template-navigation {
     min-width: 50px;
 
-
-
     @media @bp-global-small {
         border-left: 1px solid darken(@color-swatch1, 5%);
         padding-left: 6px;
     }
-
-
 }
 
 
 
 
 // ------------------------------
-// 4. #Footer
+// 5. #Footer
 // ------------------------------
 
 
@@ -270,9 +272,6 @@ body {
         }
 
 
-
-
-
         // Widget
 
         .widget {
@@ -299,7 +298,7 @@ body {
 
 
 // ------------------------------
-// 5. #Main Zone
+// 6. #Main Zone
 // ------------------------------
 
 
@@ -318,8 +317,10 @@ body {
 
 
 // -------------------------------
-// 6. #Typography
+// 7. #Typography
 // -------------------------------
+
+
 
 
 a {
