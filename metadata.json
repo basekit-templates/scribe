@@ -4,6 +4,7 @@
     "thumbnail":"scribe.png",
     "templateType":"blog",
     "pageTypes": ["home"],
+    "screenshot":"scribe-screenshot.jpg",
     "tags": {
     "en": ["business", "corporate", "company", "corporation", "professional"],
     "es": ["negocios", "corporativo", "empresa", "corporativo", "profesional"],
