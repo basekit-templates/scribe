@@ -176,10 +176,14 @@
 
 .feature__button {
     margin: 15px 0;
-   box-shadow: inset 0px 0px 0px 2px @color-swatch1;
+    box-shadow: inset 0px 0px 0px 2px @color-swatch1;
     color: @color-swatch1;
 
     @media @bp-global-medium, @bp-global-small {
         margin: 10px 0;
+    }
+
+    &:hover {
+        background-color: fade(@color-swatch1, 7%);
     }
 }
