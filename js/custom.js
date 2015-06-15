@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     if($(".ecomproduct__product-gallery").length == 0)
     {
-       $(".ecomproduct__product-image").addClass("one-image");
+       $("body").addClass("product-one-image");
     }
 
     // Next Button for ecom gallery
