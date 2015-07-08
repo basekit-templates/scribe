@@ -40,6 +40,9 @@ html, body {
 	max-height: 100vh;
 	overflow: hidden;
 	width: -webkit-calc(100% - 0px);
+	@media @bp-global-above-fullwidth {
+		width: 2000px;
+	}
 }
 
 
@@ -129,7 +132,15 @@ html, body {
 	}
 
 	@media @bp-global-small {
-		padding-right: 77px;
+		padding-right: 0;
+		padding-top: 62px;
+	}
+}
+
+// Navigation List Children
+
+.navigation-list--children {
+	@media @bp-global-small {
 		padding-top: 0;
 	}
 }
@@ -143,7 +154,7 @@ html, body {
 
 .navigation-body .navigation-item {
 	display: block;
-	max-width: 300px;
+	max-width: 400px;
 	margin: 0 0 0 auto;
 	&, * {
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -159,7 +170,6 @@ html, body {
 	box-shadow: inset 0px 0px 0px 2px fade(@color-swatch1, 0%);
 	padding: 1em 20px;
 	@media @bp-global-small {
-		font-size: bkscale(@font-swatch6-font-size, 0.7);
 		padding: 0.8em 20px;
 	}
 
