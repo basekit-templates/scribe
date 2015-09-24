@@ -167,14 +167,14 @@ html, body {
 // ------------------------------
 
 .navigation-body .item-name {
-	box-shadow: inset 0px 0px 0px 2px fade(@color-swatch1, 0%);
+	box-shadow: inset 0px 0px 0px 2px fade(@color__navigation--text, 0%);
 	padding: 1em 20px;
 	@media @bp-global-small {
 		padding: 0.8em 20px;
 	}
 
 	&:hover {
-		box-shadow: inset 0px 0px 0px 2px fade(@color-swatch1, 90%);
+		box-shadow: inset 0px 0px 0px 2px fade(@color__navigation--text, 90%);
 	}
 }
 
@@ -189,22 +189,22 @@ html, body {
 // Selected Item (not open folder)
 
 .navigation-body .navigation-item.selected:not(.open) > .item-name {
-	background-color: @color-swatch2;
-	color: @color-swatch5;
+	background-color: @color__navigation-item--background--selected;
+	color: @color__navigation-item--text--selected;
 }
 
 // Hover
 
 .navigation-body .navigation-item.selected:not(.open):hover > .item-name {
 	box-shadow: none;
-	background-color: @color-swatch2;
+	background-color: @color__navigation-item--background--selected;
 }
 
 // Hover
 
 .navigation-body .navigation-item.selected.folder:not(.open):hover > .item-name {
 	box-shadow: none;
-	background-color: @color-swatch2-alt;
+	background-color: darken(desaturate(@color__navigation-item--background--selected, 10%), 5%);
 }
 
 
@@ -269,8 +269,8 @@ html, body {
 // Open Navigaiton Folder
 
 .navigation-item.folder.open > .item-name {
-	background-color: fade(@color-swatch1, 40%);
-	color: @font-swatch6-color;
+	background-color: fade(@color__navigation--text, 40%);
+	color: @color__navigation--text;
 
 	&:after {
 		// Folder icon animation
@@ -328,7 +328,7 @@ html, body {
 
 
 .navigation-list--children .navigation-item.selected .item-name {
-	color: @color-swatch7;
+	color: @color__navigation-item--text--selected;
 }
 
 
@@ -344,7 +344,7 @@ html, body {
 .navigation-toggle {
 	.animation;
 	// Displays as icon's middle bar
-	background-color: @color-swatch7;
+	background-color: @color__navigation--icon;
 	background-clip: content-box;
 	width: 47px;
 	height: 47px;
@@ -368,7 +368,7 @@ html, body {
 		position: absolute;
 		left: 10px;
 		display: block;
-		background: @color-swatch7;
+		background: @color__navigation--icon;
 		margin-right: 0;
 		margin-left: 0;
 		-webkit-transition: all 0.25s ease-in-out;
@@ -393,13 +393,13 @@ html, body {
 
 
 	&:hover {
-		background-color: darken(@color-swatch7, 10%);
-		border-color: darken(@color-swatch7, 10%);
-		box-shadow: 0px 0px 0px 7px rgba(215,222,231,0.19);
+		background-color: darken(@color__navigation--icon, 10%);
+		border-color: darken(@color__navigation--icon, 10%);
+		box-shadow: 0px 0px 0px 7px fade(@color__navigation--icon, 10%);
 
 
 		&:after, &:before {
-			background: darken(@color-swatch7, 10%);
+			background: darken(@color__navigation--icon, 10%);
 		}
 	}
 
@@ -407,42 +407,16 @@ html, body {
 	// ------------------------------
 
 	.open & {
-		background-color: fade(@color-swatch7, 0%);
+		background-color: fade(@color__navigation--icon, 0%);
 		z-index: 100000;
 		position: relative;
 
 		&:before {
-			top: 23px; background: @color-swatch1; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+			top: 23px; background: @color__navigation--text; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
 
 		}
 		&:after {
-			bottom: 21px; background: @color-swatch1; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+			bottom: 21px; background: @color__navigation--text; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
 		}
 	}
-}
-
-
-
-@keyframes bar1 {
-    0% { top: 13px;}
-    50% { top: 23px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
-    100% {top: 23px; background: @color-swatch1; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);   }
-}
-
-@-webkit-keyframes bar1 {
-    0% { top: 13px;}
-    50% { top: 23px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
-    100% {  }
-}
-
-@keyframes bar2 {
-    0% { bottom: 13px;}
-    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);  }
-    100% {}
-}
-
-@-webkit-keyframes bar2 {
-    0% { bottom: 13px;}
-    50% { bottom: 21px;  -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg);   }
-    100% {}
 }
