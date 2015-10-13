@@ -188,6 +188,14 @@
             "color__slideshow-caption--background" : "fade(@color__body--background, 80%)",
             "color__slideshow-title--text" : "@color__p--text",
             "color__slideshow-description--text" : "@color__p--text"
+        },
+        "feature": {
+            "color__feature-headline--text" : "@font-swatch8-color",
+            "color__feature-strapline--text" : "@font-swatch9-color",
+            "color__feature-button--text" : "@color__body--background",
+            "color__feature-button--border" : "@color__body--background",
+            "color__feature-button--background" : "transparent",
+            "color__feature-button--background--hover" : "fade(@color__feature-button--border, 7%)"
         }
     }
 }
