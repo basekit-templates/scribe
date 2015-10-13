@@ -183,6 +183,11 @@
             "color__gallery-caption--background" : "fade(@color__p--text, 50%)",
             "color__gallery-title--text" : "@color__body--background",
             "color__gallery-description--text" : "@color__body--background"
+        },
+        "slideshow": {
+            "color__slideshow-caption--background" : "fade(@color__body--background, 80%)",
+            "color__slideshow-title--text" : "@color__p--text",
+            "color__slideshow-description--text" : "@color__p--text"
         }
     }
 }
