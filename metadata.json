@@ -178,6 +178,11 @@
         "form": {
             "color__form-legend--text" : "@color__p--text",
             "color__form-legend--background" : "@color__primary"
+        },
+        "gallery": {
+            "color__gallery-caption--background" : "fade(@color__p--text, 50%)",
+            "color__gallery-title--text" : "@color__body--background",
+            "color__gallery-description--text" : "@color__body--background"
         }
     }
 }
