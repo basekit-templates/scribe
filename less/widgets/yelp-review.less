@@ -10,7 +10,7 @@
 
 
 .yelp-title {
-    font-size: @font-swatch5-font-size;
+    font-size: @font__p--font-size;
     color: fade(@color__p--text, 40%);
     border-bottom: 2px solid fade(@color__p--text, 30%);
     padding: 0;
@@ -60,14 +60,14 @@
 
 .review-title {
     float: left;
-    font-size: @font-swatch4-font-size;
-    line-height: @font-swatch4-line-height;
+    font-size: @font__h4--font-size;
+    line-height: @font__h4--line-height;
     padding-bottom: 0;
 
     // Author Label
 
     .author-label {
-        font-size: bkscale(@font-swatch5-font-size, 0.72);
+        font-size: bkscale(@font__p--font-size, 0.72);
         line-height: 1.2;
         display: block;
     }
@@ -75,7 +75,7 @@
     // Review Author
 
     .review-author {
-        font-size: bkscale(@font-swatch3-font-size, 0.72);
+        font-size: bkscale(@font__h3--font-size, 0.72);
     }
 }
 
@@ -109,13 +109,13 @@
     .review-text {
         padding-bottom: 0;
         @media @bp-global-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.9);
-            line-height: bkscale(@font-swatch5-line-height, 0.9);
+            font-size: bkscale(@font__p--font-size, 0.9);
+            line-height: bkscale(@font__p--line-height, 0.9);
         }
 
         @media @bp-global-small {
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-            line-height: bkscale(@font-swatch5-line-height, 0.8);
+            font-size: bkscale(@font__p--font-size, 0.8);
+            line-height: bkscale(@font__p--line-height, 0.8);
         }
     }
 
@@ -123,13 +123,13 @@
     .review-link {
         .underline;
         @media @bp-global-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.9);
-            line-height: bkscale(@font-swatch5-line-height, 0.9);
+            font-size: bkscale(@font__p--font-size, 0.9);
+            line-height: bkscale(@font__p--line-height, 0.9);
         }
 
         @media @bp-global-small {
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-            line-height: bkscale(@font-swatch5-line-height, 0.8);
+            font-size: bkscale(@font__p--font-size, 0.8);
+            line-height: bkscale(@font__p--line-height, 0.8);
         }
     }
 }
@@ -143,7 +143,7 @@
 
 .review-footer {
     float: right;
-    font-size: bkscale(@font-swatch5-font-size, 0.8);
+    font-size: bkscale(@font__p--font-size, 0.8);
 
     // Timestamp
 

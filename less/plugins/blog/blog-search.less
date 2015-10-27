@@ -24,10 +24,10 @@
         color: @color__blogsearch-legend--text;
         background-color: @color__blogsearch-legend--background;
         width: 33.33%;
-        font-family: @font-swatch2-font-family;
-        font-size: @font-swatch2-font-size;
-        line-height: bkscale(@font-swatch7-font-size, 3);
-        height: bkscale(@font-swatch7-font-size, 3);
+        font-family: @font__h2--font-family;
+        font-size: @font__h2--font-size;
+        line-height: bkscale(@font__button--font-size, 3);
+        height: bkscale(@font__button--font-size, 3);
         text-align: right;
 
        @media @bp-global-small {
@@ -133,7 +133,7 @@
                 font-family: 'FontAwesome', sans-serif;
                 position: absolute;
                 text-align: center;
-                line-height: bkscale(@font-swatch7-font-size, 3);
+                line-height: bkscale(@font__button--font-size, 3);
                 color: @color__button--text;
                 font-size: 18px;
                 top: 0;
@@ -145,7 +145,7 @@
         }
         @media @mobile {
             &:after {
-                line-height: bkscale(@font-swatch7-font-size, 2.2);
+                line-height: bkscale(@font__button--font-size, 2.2);
             }
         }
     }

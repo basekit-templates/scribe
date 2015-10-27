@@ -214,8 +214,8 @@
 
 .listing-order {
     clear: both;
-    font-size: bkscale(@font-swatch5-font-size, 0.72);
-    line-height: bkscale(@font-swatch5-line-height, 0.72);
+    font-size: bkscale(@font__p--font-size, 0.72);
+    line-height: bkscale(@font__p--line-height, 0.72);
     color: fade(@color__p--text, 80%);
     border-bottom: 1px solid fade(@color__p--text, 16%);
 
@@ -227,8 +227,8 @@
     }
     @media @bp-global-small {
         padding: 12px 20px;
-        font-size: bkscale(@font-swatch5-font-size, 0.65);
-        line-height: bkscale(@font-swatch5-line-height, 0.65);
+        font-size: bkscale(@font__p--font-size, 0.65);
+        line-height: bkscale(@font__p--line-height, 0.65);
     }
 }
 
@@ -330,7 +330,7 @@
                 font-family: 'FontAwesome', sans-serif;
                 position: absolute;
                 text-align: center;
-                line-height: bkscale(@font-swatch7-font-size, 3);
+                line-height: bkscale(@font__button--font-size, 3);
                 color: @color__button--text;
                 font-size: 18px;
                 top: 0;
@@ -342,7 +342,7 @@
         }
         @media @mobile {
             &:after {
-                line-height: bkscale(@font-swatch7-font-size, 2.2);
+                line-height: bkscale(@font__button--font-size, 2.2);
             }
         }
     }
@@ -553,17 +553,17 @@
 // Item Title
 
 .product-item-title {
-    font-size: @font-swatch3-font-size;
-    line-height: @font-swatch3-line-height;
+    font-size: @font__h3--font-size;
+    line-height: @font__h3--line-height;
     margin-bottom: 0.8em;
     @media @bp-global-medium {
-        font-size: bkscale(@font-swatch3-font-size, 0.82);
-        line-height: bkscale(@font-swatch3-line-height, 0.82);
+        font-size: bkscale(@font__h3--font-size, 0.82);
+        line-height: bkscale(@font__h3--line-height, 0.82);
     }
     @media @bp-global-small {
-        font-size: bkscale(@font-swatch3-font-size, 0.72);
+        font-size: bkscale(@font__h3--font-size, 0.72);
 
-        line-height: bkscale(@font-swatch3-line-height, 0.72);
+        line-height: bkscale(@font__h3--line-height, 0.72);
     }
      // Title Links
 
@@ -579,12 +579,12 @@
 // Item Price
 
 .product-item-price {
-    font-size: bkscale(@font-swatch5-font-size, 0.82);
-    line-height: bkscale(@font-swatch5-line-height, 0.82);
+    font-size: bkscale(@font__p--font-size, 0.82);
+    line-height: bkscale(@font__p--line-height, 0.82);
 
     @media @mobile {
-        font-size: bkscale(@font-swatch5-font-size, 0.7);
-        line-height: bkscale(@font-swatch5-line-height, 0.7);
+        font-size: bkscale(@font__p--font-size, 0.7);
+        line-height: bkscale(@font__p--line-height, 0.7);
     }
 }
 
