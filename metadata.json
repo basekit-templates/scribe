@@ -255,7 +255,7 @@
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
         "menu": {
-            "color__menusections--background" : "@color__primary--alt",
+            "color__menusections--background" : "darken(desaturate(@color__primary, 10%), 5%)",
             "color__menu--background" : "fade(@color__p--text, 3%)",
             "color__menu-section-header--background" : "@color__primary",
             "color__menu-section-featured--background" : "@color__primary"
