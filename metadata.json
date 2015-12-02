@@ -234,7 +234,8 @@
         "slideshow": {
             "color__slideshow-caption--background" : "fade(@color__body--background, 80%)",
             "color__slideshow-title--text" : "@color__p--text",
-            "color__slideshow-description--text" : "@color__p--text"
+            "color__slideshow-description--text" : "@color__p--text",
+            "color__slideshow-pagination-item--background": "@color__primary"
         },
         "feature": {
             "color__feature-headline--text" : "@font-swatch8-color",
