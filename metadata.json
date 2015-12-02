@@ -262,9 +262,9 @@
             "color__menu-section-featured--background" : "@color__primary"
         },
         "socialicons": {
-            "color__socialicons--icon" : "@color__button--border",
-            "color__socialicons--icon--hover" : "@color__button--border",
-            "color__socialicons--icon--background" : "@color__button--background"
+            "color__socialicons--icon" : "#9aa7b5",
+            "color__socialicons--icon--hover" : "#9aa7b5",
+            "color__socialicons--icon--background" : "rgba(154,167,181,0.2)"
         },
         "blog": {
             "color__blogsearch-legend--background" : "@color__form-legend--background",
