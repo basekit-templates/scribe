@@ -37,14 +37,14 @@
 // ------------------------------
 
 
-@content-background: darken(@color-swatch1, 12%);
+@content-background: @color-swatch1;
 @color-swatch2-alt: darken(desaturate(@color-swatch2, 10%), 5%);
 @color-swatch7-alt: lighten(saturate(@color-swatch7, 1%), 4%);
 @color-swatch7-hover: darken(@color-swatch7, 10%);
 
 
 body {
-    background-color: @content-background;
+    background-color: darken(@color-swatch1, 12%);
 }
 
 
@@ -53,7 +53,7 @@ body {
 
 
 .page-content {
-    background-color: @color-swatch1;
+    background-color: @content-background;
 
     @media @bp-global-above-fullwidth {
         width: 2000px;
