@@ -1,5 +1,6 @@
 {
     "name":"Scribe",
+    "versionTenCompatible": 1,
     "widgetVersion": 2,
     "thumbnail":"scribe.png",
     "templateType":"blog",
